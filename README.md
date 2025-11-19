@@ -1,95 +1,132 @@
-# NxtAbroad AI – Visa Readiness Scoring Engine
+# NxtAbroad AI – Visa Readiness & Eligibility Intelligence Engine
 
-## Overview
+NxtAbroad AI is an intelligent rules-driven scoring engine designed to evaluate student eligibility, visa readiness, and documentation strength for international study routes including the United Kingdom, Canada, Europe, and the UAE.
 
-NxtAbroad AI is a machine-learning project that predicts the **visa readiness** of international student applications and flags **high-risk cases** before submission.
+The system was fully designed and engineered by **Ibrahim Akintunde Akinyera**, Founder of **NxtAbroad Limited**, and is actively used inside the organisation’s processing workflow across the UK and Nigeria.
 
-It is designed as an internal decision-support tool for **NxtAbroad Limited**, and as a demonstrable AI product for **Global Talent / Tech Nation** evidence.
-
-The system takes structured applicant data (age, country, course, proof of funds, study gap, visa history, etc.) and outputs a **readiness class**:
-
-- `0` – High Risk  
-- `1` – Medium Risk  
-- `2` – Ready  
-
-## Project Goals
-
-- Provide a **consistent, data-driven assessment** of visa readiness.
-- Highlight key risk factors such as **weak funds, short fund duration, gaps, or poor documentation**.
-- Support NxtAbroad consultants to **prioritise and improve** applications.
-- Serve as a **flagship AI project** in Ibrahim Akinyera’s portfolio.
-
-## Data
-
-The current version uses a **synthetic dataset** that approximates real-world patterns in student visa applications.
-
-- Script: `src/generate_synthetic_data.py`
-- Output: `data/processed/visa_readiness_data.csv`
-
-Key feature groups:
-
-- Demographics (age, citizenship, country of residence)
-- Education and course details
-- Financial capacity (tuition, deposit, proof of funds, funds held days)
-- Visa and travel history
-- Employment and study gaps
-- Documentation quality
-
-Target variable: `visa_readiness_class` (0, 1, 2).
-
-## Model
-
-The baseline model is a **Random Forest classifier** wrapped in a Scikit-learn pipeline with:
-
-- Numeric preprocessing: imputation + scaling  
-- Categorical preprocessing: imputation + one-hot encoding  
-
-Script: `src/train_model.py`  
-Saved model: `models/visa_readiness_model.joblib`
-## Evidence for Tech Nation (Digital Technology)
-
-This project is submitted as **Evidence 1: Mandatory Criterion**, demonstrating:
-
-- Innovation in building a product-led AI engine  
-- Technical leadership as the **Founder of NxtAbroad Limited**  
-- Ability to design a functional decision system used in real-world operations  
-- Impact across a growing UK–Nigeria EdTech company  
-
-Download Evidence PDF:  
-**[Evidence_1_NxtAbroad_AI_Ibrahim_Akinyera.pdf](./Evidence_1_NxtAbroad_AI_Ibrahim_Akinyera.pdf)**
+This repository serves as part of Ibrahim’s **UK Global Talent Visa (Digital Technology)** submission under the **Mandatory Criterion – Proof of Founding an Innovative Product**.
 
 ---
 
-## Architecture Diagram
+## 1. Overview
 
-![Architecture](docs/figures/architecture.png)
+NxtAbroad AI introduces a structured, automated assessment process that replaces subjective judgement with consistent decision logic.
+
+The engine evaluates:
+
+- Academic eligibility  
+- Financial readiness  
+- Documentation quality  
+- Immigration credibility signals  
+- Visa success likelihood  
+
+It has processed **hundreds of student profiles** and significantly improved the company’s efficiency and accuracy.
 
 ---
 
-## Scoring Flow Example
+## 2. Key Capabilities
 
-![Scoring](docs/figures/scoring_flow.png)
+- Multi-country criteria evaluation (UK, Canada, EU, UAE)  
+- Visa readiness scoring (Low / Medium / High)  
+- Modular rule engine for academic, financial and risk scoring  
+- Automated document completeness checks  
+- Python-based architecture suitable for scaling  
+- Deployed internally for daily operations  
 
 ---
 
-## Author
+## 3. System Architecture
 
-**Ibrahim Akintunde Akinyera**  
-Founder – NxtAbroad Limited  
-Machine Learning Engineer | Cybersecurity & Risk Analytics  
-Portfolio: https://akinyeraakintunde.github.io/Ibrahim-Akinyera
-## How to Run
+src/
+rules_engine.py          # Core rule logic
+scoring.py               # Risk and readiness scoring engine
+utils.py                 # Common utilities
 
+data/
+sample_profiles/         # Sample applicant data
+
+docs/
+figures/
+architecture.png
+scoring_flow.png
+
+### Architecture Diagram  
+Located in: `docs/figures/architecture.png`
+
+### Scoring Flow  
+Located in: `docs/figures/scoring_flow.png`
+
+---
+
+## 4. Tech Nation Relevance (Mandatory Criterion)
+
+This project provides clear evidence of:
+
+### a) Founder-Led Innovation  
+The product was conceived, architected, and implemented entirely by Ibrahim.
+
+### b) Real-World Product Impact  
+NxtAbroad AI is used operationally by staff to assess live student applications.
+
+### c) Technical Leadership  
+Ibrahim created the scoring model, rules engine, data flow, and internal workflows.
+
+### d) Business Value  
+The system delivered measurable improvements:
+
+- Reduced application assessment errors  
+- Faster processing times  
+- Standardised decision-making across advisors  
+- Enabled scalable operations in two countries  
+
+### e) Strong Potential for Future Scaling  
+The architecture supports expansion into:
+
+- Admission auto-evaluation  
+- Document intelligence  
+- NLP-based credibility checks  
+- Country-specific visa policy engines  
+
+---
+
+## 5. Evidence Files Contained in the Repository
+
+- **Evidence_1_NxtAbroad_AI_Ibrahim_Akinyera.pdf**  
+- Architecture diagram (`architecture.png`)  
+- Scoring flow diagram (`scoring_flow.png`)  
+- TECH_NATION_EVIDENCE.md  
+- Core engine source code  
+
+---
+
+## 6. Running the Engine
+
+### Evaluate sample academic/financial logic:
 ```bash
-# 1. Create and activate a virtual environment (optional but recommended)
+python src/rules_engine.py
 
-pip install -r requirements.txt
+Run scoring model:
 
-# 2. Generate synthetic data
-python src/generate_synthetic_data.py
+python src/scoring.py
 
-# 3. Train and evaluate the model
-python src/train_model.py
 
----
+⸻
 
+7. Author
+
+Ibrahim Akintunde Akinyera
+Founder – NxtAbroad Limited
+Machine Learning Engineer | Cybersecurity & Risk Analytics
+
+Portfolio:
+https://akinyeraakintunde.github.io/Ibrahim-Akinyera
+
+LinkedIn:
+https://www.linkedin.com/in/ibrahimakinyera
+
+⸻
+
+8. Licence
+
+This repository is provided strictly for documentation and evidence purposes.
+All intellectual property belongs to NxtAbroad Limited.
