@@ -59,3 +59,38 @@ python src/generate_synthetic_data.py
 
 # 3. Train and evaluate the model
 python src/train_model.py
+
+---
+
+## Evidence for Tech Nation (Digital Technology)
+
+This project is submitted as **Evidence 1: Mandatory Criterion**, demonstrating:
+
+- Innovation in building a product-led AI engine  
+- Technical leadership as the **Founder of NxtAbroad Limited**  
+- Ability to design a functional decision system used in real-world operations  
+- Impact across a growing UK–Nigeria EdTech company  
+
+Download Evidence PDF:  
+**[Evidence_1_NxtAbroad_AI_Ibrahim_Akinyera.pdf](./Evidence_1_NxtAbroad_AI_Ibrahim_Akinyera.pdf)**
+
+---
+
+## Architecture Diagram
+
+![Architecture](docs/figures/architecture.png)
+
+---
+
+## Scoring Flow Example
+
+![Scoring](docs/figures/scoring_flow.png)
+
+---
+
+## Author
+
+**Ibrahim Akintunde Akinyera**  
+Founder – NxtAbroad Limited  
+Machine Learning Engineer | Cybersecurity & Risk Analytics  
+Portfolio: https://akinyeraakintunde.github.io/Ibrahim-Akinyera
