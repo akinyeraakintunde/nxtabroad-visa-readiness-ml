@@ -46,22 +46,6 @@ The baseline model is a **Random Forest classifier** wrapped in a Scikit-learn p
 
 Script: `src/train_model.py`  
 Saved model: `models/visa_readiness_model.joblib`
-
-## How to Run
-
-```bash
-# 1. Create and activate a virtual environment (optional but recommended)
-
-pip install -r requirements.txt
-
-# 2. Generate synthetic data
-python src/generate_synthetic_data.py
-
-# 3. Train and evaluate the model
-python src/train_model.py
-
----
-
 ## Evidence for Tech Nation (Digital Technology)
 
 This project is submitted as **Evidence 1: Mandatory Criterion**, demonstrating:
@@ -94,3 +78,18 @@ Download Evidence PDF:
 Founder – NxtAbroad Limited  
 Machine Learning Engineer | Cybersecurity & Risk Analytics  
 Portfolio: https://akinyeraakintunde.github.io/Ibrahim-Akinyera
+## How to Run
+
+```bash
+# 1. Create and activate a virtual environment (optional but recommended)
+
+pip install -r requirements.txt
+
+# 2. Generate synthetic data
+python src/generate_synthetic_data.py
+
+# 3. Train and evaluate the model
+python src/train_model.py
+
+---
+
