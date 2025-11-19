@@ -2,7 +2,7 @@
 
 NxtAbroad AI is an intelligent rules-driven scoring engine designed to evaluate student eligibility, visa readiness, and documentation strength for international study routes including the United Kingdom, Canada, Europe, and the UAE.
 
-The system was fully designed and engineered by **Ibrahim Akintunde Akinyera**, Founder of **NxtAbroad Limited**, and is actively used inside the organisation’s processing workflow across the UK and Nigeria.
+The system was fully designed and engineered by **Ibrahim Akintunde Akinyera**, Founder of **NxtAbroad Limited**, and is actively used inside the organisation’s processing workflow.
 
 This repository serves as part of Ibrahim’s **UK Global Talent Visa (Digital Technology)** submission under the **Mandatory Criterion – Proof of Founding an Innovative Product**.
 
