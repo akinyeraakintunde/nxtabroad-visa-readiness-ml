@@ -102,7 +102,7 @@ The architecture supports expansion into:
 ## 6. Running the Engine
 
 ### Evaluate sample academic/financial logic:
-```bash
+
 python src/rules_engine.py
 
 Run scoring model:
