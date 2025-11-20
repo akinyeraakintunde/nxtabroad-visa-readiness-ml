@@ -1,132 +1,165 @@
 # NxtAbroad AI – Visa Readiness & Eligibility Intelligence Engine
 
-NxtAbroad AI is an intelligent rules-driven scoring engine designed to evaluate student eligibility, visa readiness, and documentation strength for international study routes including the United Kingdom, Canada, Europe, and the UAE.
+NxtAbroad AI is a rules-driven intelligence engine for assessing student eligibility, visa readiness, and documentation strength for international study destinations (UK, Canada, Europe, UAE). It standardises how student applications are evaluated and provides consistent, explainable readiness scores used by NxtAbroad advisors.
 
-The system was fully designed and engineered by **Ibrahim Akintunde Akinyera**, Founder of **NxtAbroad Limited**, and is actively used inside the organisation’s processing workflow.
+The system was conceived, architected, and implemented by Ibrahim Akintunde Akinyera (Founder, NxtAbroad Limited). It also serves as a core evidence component for Ibrahim’s UK Global Talent Visa application under the Mandatory Criterion (Founding an Innovative Digital Product).
 
-This repository serves as part of Ibrahim’s **UK Global Talent Visa (Digital Technology)** submission under the **Mandatory Criterion – Proof of Founding an Innovative Product**.
+------------------------------------------------------------
+## 1. Why NxtAbroad AI Exists
 
----
+Traditional student-visa screening processes rely on manual judgement, inconsistent staff decisions, and spreadsheet-based logic. This often results in:
 
-## 1. Overview
+- avoidable visa refusals  
+- inconsistent assessments across advisors or offices  
+- slow manual analysis  
+- weak documentation checks  
+- difficulty scaling operations  
 
-NxtAbroad AI introduces a structured, automated assessment process that replaces subjective judgement with consistent decision logic.
+NxtAbroad AI addresses these issues by providing:
 
-The engine evaluates:
+- a structured decision framework  
+- deterministic rules for each evaluation category  
+- clear readiness bands (Low, Medium, High)  
+- narrative notes for improved advisor transparency  
+- a process that is repeatable, auditable, and scalable  
 
-- Academic eligibility  
-- Financial readiness  
-- Documentation quality  
-- Immigration credibility signals  
-- Visa success likelihood  
+It has been applied to hundreds of student profiles internally and has significantly improved accuracy and speed.
 
-It has processed **hundreds of student profiles** and significantly improved the company’s efficiency and accuracy.
+------------------------------------------------------------
+## 2. What the Engine Evaluates
 
----
+The core engine evaluates:
 
-## 2. Key Capabilities
+- Academic Eligibility  
+  – qualification level  
+  – grade/classification  
+  – course compatibility  
+  – study gaps  
 
-- Multi-country criteria evaluation (UK, Canada, EU, UAE)  
-- Visa readiness scoring (Low / Medium / High)  
-- Modular rule engine for academic, financial and risk scoring  
-- Automated document completeness checks  
-- Python-based architecture suitable for scaling  
-- Deployed internally for daily operations  
+- Financial Readiness  
+  – proof of funds (POF) coverage  
+  – account stability  
+  – sponsor relationships  
+  – recent inflow anomalies  
 
----
+- Documentation Quality  
+  – completeness of required documents  
+  – quality of uploads  
+  – consistency across supporting evidence  
 
-## 3. System Architecture
+- Immigration Credibility  
+  – previous refusals  
+  – travel history  
+  – alignment of applicant narrative  
 
-src/
-rules_engine.py          # Core rule logic
-scoring.py               # Risk and readiness scoring engine
-utils.py                 # Common utilities
+- Visa Readiness Score  
+  – continuous score (0–100)  
+  – mapped to readiness band (Low / Medium / High)  
 
-data/
-sample_profiles/         # Sample applicant data
+------------------------------------------------------------
+## 3. Repository Structure
 
-docs/
-figures/
-architecture.png
-scoring_flow.png
+nxtabroad-visa-readiness-ml/  
+│  
+├── data/  
+│   └── sample_profiles/            Example input profiles  
+│  
+├── docs/  
+│   └── figures/  
+│       ├── architecture.png        System architecture  
+│       └── scoring_flow.png        Scoring flow diagram  
+│  
+├── models/                         Optional saved rule configs or ML prototypes  
+│  
+├── src/  
+│   ├── rules_engine.py             Core business rules  
+│   ├── scoring.py                  Aggregated readiness scoring  
+│   └── utils.py                    Helper functions  
+│  
+├── Evidence_1_NxtAbroad_AI_Ibrahim_Akinyera.pdf  
+├── TECH_NATION_EVIDENCE.md  
+├── requirements.txt  
+└── README.md  
 
-### Architecture Diagram  
-Located in: `docs/figures/architecture.png`
+------------------------------------------------------------
+## 4. Scoring Model Overview
 
-### Scoring Flow  
-Located in: `docs/figures/scoring_flow.png`
+The scoring model works in four stages:
 
----
+1. **Rule Evaluation**  
+   Each dimension (academic, financial, documentation, credibility) is evaluated using deterministic rules in `rules_engine.py`.
 
-## 4. Tech Nation Relevance (Mandatory Criterion)
+2. **Sub-score Calculation**  
+   Each category produces a score (0–100).
 
-This project provides clear evidence of:
+3. **Weighted Readiness Score**  
+   The scoring engine (`scoring.py`) combines the sub-scores into a final readiness score.
 
-### a) Founder-Led Innovation  
-The product was conceived, architected, and implemented entirely by Ibrahim.
+4. **Band Classification**  
+   Final results fall into three bands:  
+   - 0–39: Low readiness  
+   - 40–69: Medium readiness  
+   - 70–100: High readiness  
 
-### b) Real-World Product Impact  
-NxtAbroad AI is used operationally by staff to assess live student applications.
+These outputs allow NxtAbroad advisors to take informed, consistent decisions.
 
-### c) Technical Leadership  
-Ibrahim created the scoring model, rules engine, data flow, and internal workflows.
+------------------------------------------------------------
+## 5. Running the Engine
 
-### d) Business Value  
-The system delivered measurable improvements:
+### Install dependencies
+pip install -r requirements.txt
 
-- Reduced application assessment errors  
-- Faster processing times  
-- Standardised decision-making across advisors  
-- Enabled scalable operations in two countries  
-
-### e) Strong Potential for Future Scaling  
-The architecture supports expansion into:
-
-- Admission auto-evaluation  
-- Document intelligence  
-- NLP-based credibility checks  
-- Country-specific visa policy engines  
-
----
-
-## 5. Evidence Files Contained in the Repository
-
-- **Evidence_1_NxtAbroad_AI_Ibrahim_Akinyera.pdf**  
-- Architecture diagram (`architecture.png`)  
-- Scoring flow diagram (`scoring_flow.png`)  
-- TECH_NATION_EVIDENCE.md  
-- Core engine source code  
-
----
-
-## 6. Running the Engine
-
-### Evaluate sample academic/financial logic:
-
+### Run the core rules engine
 python src/rules_engine.py
 
-Run scoring model:
-
+### Run the readiness scoring engine
 python src/scoring.py
 
+You may customise the input profiles by modifying the sample data under:
+data/sample_profiles/
 
-⸻
+------------------------------------------------------------
+## 6. Tech Nation Relevance (Mandatory Criterion)
 
-7. Author
+This project demonstrates:
 
-Ibrahim Akintunde Akinyera
-Founder – NxtAbroad Limited
-Machine Learning Engineer | Cybersecurity & Risk Analytics
+- technical innovation as a founder  
+- ability to translate business knowledge into software  
+- system architecture and rules design  
+- product development leadership  
+- evidence of real-world adoption by NxtAbroad staff  
+- an automated scoring engine with practical business value  
 
-Portfolio:
-https://akinyeraakintunde.github.io/Ibrahim-Akinyera
+Included in this repository:
 
-LinkedIn:
-https://www.linkedin.com/in/ibrahimakinyera
+- Evidence_1 PDF  
+- architecture and scoring flow diagrams  
+- technical narrative (TECH_NATION_EVIDENCE.md)  
+- core scoring logic and rule engine source code  
 
-⸻
+------------------------------------------------------------
+## 7. Future Extensions
 
-8. Licence
+The current engine is built to support future upgrades:
 
-This repository is provided strictly for documentation and evidence purposes.
-All intellectual property belongs to NxtAbroad Limited.
+- API service for multi-location NxtAbroad teams  
+- dashboard analytics  
+- NLP-driven Personal Statement quality checks  
+- ML-based credibility detection  
+- multi-country scoring profiles  
+
+------------------------------------------------------------
+## 8. Author
+
+Ibrahim Akintunde Akinyera  
+Founder – NxtAbroad Limited  
+Machine Learning Engineer | Cybersecurity & Risk Analytics  
+
+Portfolio: https://akinyeraakintunde.github.io/Ibrahim-Akinyera  
+GitHub: https://github.com/akinyeraakintunde  
+LinkedIn: https://linkedin.com/in/ibrahimakinyera  
+
+------------------------------------------------------------
+## 9. License
+
+All rights reserved. Property of NxtAbroad Limited.
