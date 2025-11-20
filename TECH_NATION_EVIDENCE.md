@@ -128,5 +128,5 @@ https://akinyeraakintunde.github.io/Ibrahim-Akinyera
 ## 7. Contact
 
 Ibrahim Akintunde Akinyera  
-Email: [your email here]  
+Email: Akinyeraakintunde@gmail.com
 LinkedIn: https://linkedin.com/in/ibrahimakinyera
