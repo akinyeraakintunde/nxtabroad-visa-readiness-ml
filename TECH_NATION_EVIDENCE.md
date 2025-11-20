@@ -4,8 +4,6 @@ NxtAbroad AI – Visa Readiness & Eligibility Intelligence Engine
 
 Applicant: Ibrahim Akintunde Akinyera
 
-⸻
-
 1. Summary of Evidence
 
 This document explains how NxtAbroad AI, an automated visa readiness and eligibility scoring engine, demonstrates founder-led innovation and technical leadership by Ibrahim Akintunde Akinyera.
@@ -18,7 +16,6 @@ This evidence supports the Mandatory Criterion by showing:
 	•	Real-world deployment and customer impact
 	•	A scalable rules-driven solution uncommon in the Nigerian EdTech + immigration market
 
-⸻
 
 2. Description of the Product
 
@@ -34,8 +31,6 @@ The system is actively used by NxtAbroad staff to determine student readiness an
 
 It processes hundreds of profiles per intake and is a foundational component of the organisation’s digital operations.
 
-⸻
-
 3. Applicant’s Role (Founder & Lead Engineer)
 
 Ibrahim independently:
@@ -47,8 +42,6 @@ Ibrahim independently:
 	•	Integrated the system into the company’s operational workflow
 
 His contribution demonstrates end-to-end ownership as both Founder and Lead Engineer.
-
-⸻
 
 4. Technical Architecture Overview
 
@@ -82,8 +75,6 @@ Supporting diagrams are included in:
 	•	docs/figures/architecture.png
 	•	docs/figures/scoring_flow.png
 
-⸻
-
 5. Problem Solved & Innovation
 
 Before NxtAbroad AI:
@@ -103,8 +94,6 @@ Innovation introduced by Ibrahim:
 
 This product is both innovative and founder-led, clearly meeting the Mandatory Criterion.
 
-⸻
-
 6. Impact & Measurable Outcomes
 
 NxtAbroad AI has delivered significant real-world impact:
@@ -115,8 +104,6 @@ NxtAbroad AI has delivered significant real-world impact:
 	•	Operational Growth – System supports increased application volume
 
 The tool is actively used within the business, making this evidence verifiable and practical.
-
-⸻
 
 7. Materials Included in This Repository
 
@@ -143,14 +130,10 @@ Sample Data
 
 These materials collectively demonstrate Ibrahim’s technical design, leadership, and product delivery.
 
-⸻
-
 8. Public Repository Link
 
 GitHub Repository:
 https://github.com/akinyeraakintunde/nxtabroad-visa-readiness-ml
-
-⸻
 
 9. Conclusion
 
