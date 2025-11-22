@@ -1,0 +1,41 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-5678-49ef-9101-abcdef123456",
+    "name": "NxtAbroad AI - Visa Readiness API",
+    "description": "Postman collection to test the NxtAbroad AI FastAPI scoring endpoint.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Visa Readiness - Predict",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"profiles\": [\n    {\n      \"profile_id\": \"STU001\",\n      \"destination_country\": \"UK\",\n      \"level_of_study\": \"Masters\",\n      \"course_match\": \"Strong\",\n      \"degree_classification\": \"First Class\",\n      \"study_gap_years\": 0,\n      \"has_english_test\": \"Yes\",\n      \"english_test_type\": \"IELTS Academic\",\n      \"english_overall_score\": 7.5,\n      \"pof_required_gbp\": 18400,\n      \"pof_available_gbp\": 26000,\n      \"bank_statement_months\": 6,\n      \"sponsor_type\": \"Self\",\n      \"recent_large_deposit\": \"No\",\n      \"documents_complete\": \"Yes\",\n      \"documents_quality_score\": 92,\n      \"previous_visa_refusal\": \"No\",\n      \"travel_history_level\": \"Strong\",\n      \"personal_statement_quality\": \"Strong\",\n      \"dependants_count\": 0,\n      \"target_intake\": \"2026-01\",\n      \"advisor_location\": \"Ibadan\"\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/predict",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "predict"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
