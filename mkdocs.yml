@@ -1,0 +1,23 @@
+site_name: NxtAbroad AI – Visa Readiness Engine
+site_description: Documentation for the NxtAbroad AI Visa Readiness & Eligibility Intelligence Engine.
+site_author: Ibrahim Akintunde Akinyera
+repo_url: https://github.com/akinyeraakintunde/nxtabroad-visa-readiness-ml
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Rules Engine: rules_engine.md
+  - API: api.md
+  - Deployment: deploy.md
+
+theme:
+  name: mkdocs
+  language: en
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code
+
+docs_dir: docs
