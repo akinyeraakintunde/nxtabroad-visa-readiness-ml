@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  nxtabroad_ai:
+    build: .
+    container_name: nxtabroad-ai
+    ports:
+      - "8000:8000"
+    restart: always
+    environment:
+      - API_ENV=production
+      - LOG_LEVEL=info
