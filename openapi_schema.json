@@ -1,1 +1,167 @@
-
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "NxtAbroad AI – Visa Readiness API",
+    "version": "1.0.0",
+    "description": "API for scoring visa readiness profiles using rule-based evaluation."
+  },
+  "paths": {
+    "/predict": {
+      "post": {
+        "summary": "Score visa readiness",
+        "operationId": "predict",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileRequest"
+              },
+              "example": {
+                "profiles": [
+                  {
+                    "profile_id": "STU001",
+                    "destination_country": "UK",
+                    "level_of_study": "Masters",
+                    "course_match": "Strong",
+                    "degree_classification": "First Class",
+                    "study_gap_years": 0,
+                    "has_english_test": "Yes",
+                    "english_test_type": "IELTS Academic",
+                    "english_overall_score": 7.5,
+                    "pof_required_gbp": 18400,
+                    "pof_available_gbp": 26000,
+                    "bank_statement_months": 6,
+                    "sponsor_type": "Self",
+                    "recent_large_deposit": "No",
+                    "documents_complete": "Yes",
+                    "documents_quality_score": 92,
+                    "previous_visa_refusal": "No",
+                    "travel_history_level": "Strong",
+                    "personal_statement_quality": "Strong",
+                    "dependants_count": 0,
+                    "target_intake": "2026-01",
+                    "advisor_location": "Ibadan"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Scoring results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PredictionResponse"
+                },
+                "example": {
+                  "results": [
+                    {
+                      "profile_id": "STU001",
+                      "academic_score": 92,
+                      "financial_score": 94,
+                      "documentation_score": 95,
+                      "credibility_score": 90,
+                      "overall_score": 93,
+                      "readiness_band": "High",
+                      "explanations": [
+                        "Academic strength: First Class.",
+                        "Funds meet or exceed requirement.",
+                        "Documentation complete.",
+                        "Strong travel history.",
+                        "Strong personal statement."
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Profile": {
+        "type": "object",
+        "properties": {
+          "profile_id": { "type": "string" },
+          "destination_country": { "type": "string" },
+          "level_of_study": { "type": "string" },
+          "course_match": { "type": "string" },
+          "degree_classification": { "type": "string" },
+          "study_gap_years": { "type": "integer" },
+          "has_english_test": { "type": "string" },
+          "english_test_type": { "type": "string" },
+          "english_overall_score": { "type": "number" },
+          "pof_required_gbp": { "type": "number" },
+          "pof_available_gbp": { "type": "number" },
+          "bank_statement_months": { "type": "integer" },
+          "sponsor_type": { "type": "string" },
+          "recent_large_deposit": { "type": "string" },
+          "documents_complete": { "type": "string" },
+          "documents_quality_score": { "type": "number" },
+          "previous_visa_refusal": { "type": "string" },
+          "travel_history_level": { "type": "string" },
+          "personal_statement_quality": { "type": "string" },
+          "dependants_count": { "type": "integer" },
+          "target_intake": { "type": "string" },
+          "advisor_location": { "type": "string" }
+        },
+        "required": [
+          "profile_id",
+          "destination_country",
+          "level_of_study",
+          "course_match",
+          "degree_classification",
+          "study_gap_years",
+          "has_english_test",
+          "english_test_type",
+          "english_overall_score",
+          "pof_required_gbp",
+          "pof_available_gbp",
+          "bank_statement_months",
+          "sponsor_type",
+          "recent_large_deposit",
+          "documents_complete",
+          "documents_quality_score",
+          "previous_visa_refusal",
+          "travel_history_level",
+          "personal_statement_quality",
+          "dependants_count",
+          "target_intake",
+          "advisor_location"
+        ]
+      },
+      "ProfileRequest": {
+        "type": "object",
+        "properties": {
+          "profiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Profile"
+            }
+          }
+        },
+        "required": ["profiles"]
+      },
+      "PredictionResponse": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  }
+}
