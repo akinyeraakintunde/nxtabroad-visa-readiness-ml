@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+*.env
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# PyInstaller
+*.spec
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+temp/
+tmp/
+
+# VSCode
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (leave sample data)
+data/processed/*.tmp
+data/processed/*.bak
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# OS files
+.DS_Store
+Thumbs.db
