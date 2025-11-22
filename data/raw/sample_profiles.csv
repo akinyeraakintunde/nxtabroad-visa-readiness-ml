@@ -1,0 +1,11 @@
+profile_id,destination_country,level_of_study,course_match,degree_classification,study_gap_years,has_english_test,english_test_type,english_overall_score,pof_required_gbp,pof_available_gbp,bank_statement_months,sponsor_type,recent_large_deposit,documents_complete,documents_quality_score,previous_visa_refusal,travel_history_level,personal_statement_quality,dependants_count,target_intake,advisor_location
+STU001,UK,Masters,Strong,First Class,0,Yes,IELTS Academic,7.5,18400,26000,6,Self,No,Yes,92,No,Strong,88,0,2026-01,Ibadan
+STU002,UK,Masters,Good,Upper Second,2,Yes,IELTS Academic,7.0,18400,19500,6,Parent,No,Yes,85,No,Limited,80,1,2026-01,Lagos
+STU003,UK,Masters,Partial,Lower Second,4,Yes,UKVI IELTS,6.0,18400,17000,3,Parent,Yes,Partial,65,No,None,72,0,2026-09,Ibadan
+STU004,UK,Bachelors,Strong,Distinction,1,Yes,WAEC English C4,0,18400,21000,4,Self,No,Yes,88,No,Limited,78,0,2026-01,Abuja
+STU005,Canada,PG Diploma,Good,HND Upper,5,Yes,IELTS Academic,6.5,16000,17500,4,Parent,Yes,Partial,70,Yes,None,68,2,2026-05,Ibadan
+STU006,UK,Masters,Strong,Upper Second,0,Yes,IELTS Academic,8.0,18400,35000,6,Company,No,Yes,95,No,Strong,90,0,2026-01,Belfast
+STU007,UK,Masters,Weak,Third Class,6,No,None,0,18400,14000,3,Parent,Yes,No,55,Yes,None,60,0,2026-09,Lagos
+STU008,Europe,Masters,Good,Upper Second,3,Yes,IELTS Academic,6.5,12000,13000,3,Self,No,Partial,73,No,Limited,75,1,2026-09,Ibadan
+STU009,UAE,Bachelors,Strong,Distinction,0,Yes,IELTS Academic,7.0,15000,19000,6,Parent,No,Yes,87,No,Limited,82,0,2026-01,Ilorin
+STU010,UK,Masters,Partial,HND Lower,7,Yes,IELTS Academic,6.0,18400,16500,4,Parent,Yes,Partial,68,Yes,None,65,3,2027-01,Ibadan
