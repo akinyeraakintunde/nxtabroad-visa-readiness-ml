@@ -171,5 +171,5 @@ v1.0.0
 Ibrahim Akintunde Akinyera  
 Machine Learning & Cybersecurity Engineer  
 Founder, NxtAbroad Limited  
-Email: contact@nxtabroad.com  
+Email: info@nxtabroad.com  
 Portfolio: https://akinyeraakintunde.github.io/Ibrahim-Akinyera/
