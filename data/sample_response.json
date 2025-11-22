@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "profile_id": "STU001",
+      "academic_score": 92,
+      "financial_score": 94,
+      "documentation_score": 95,
+      "credibility_score": 90,
+      "overall_score": 93,
+      "readiness_band": "High",
+      "explanations": [
+        "Academic strength: First Class.",
+        "Funds meet or exceed requirement.",
+        "Documentation complete.",
+        "Strong travel history.",
+        "Strong personal statement."
+      ]
+    }
+  ]
+}
