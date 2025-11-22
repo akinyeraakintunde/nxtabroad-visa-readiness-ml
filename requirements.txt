@@ -1,6 +1,16 @@
-pandas
-numpy
-scikit-learn
-joblib
-streamlit
+# Core dependencies for NxtAbroad AI – Visa Readiness Scoring Engine
 
+pandas>=1.5.0
+numpy>=1.23.0
+python-dateutil>=2.8.2
+
+# CLI & development
+argparse>=1.4.0
+
+# Optional – for CSV and data handling helpers
+xlrd>=2.0.1
+openpyxl>=3.1.0
+
+# (Optional) For potential future ML integration
+scikit-learn>=1.0.2
+joblib>=1.2.0
