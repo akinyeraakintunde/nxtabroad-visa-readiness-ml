@@ -163,7 +163,3 @@ LinkedIn: https://www.linkedin.com/in/ibrahimakinyera
 Licence
 
 MIT License
-
----
-
-When you’ve pasted and committed this, reply **“README done”** and we’ll move straight into **Step 1: FastAPI backend on GitHub**.
