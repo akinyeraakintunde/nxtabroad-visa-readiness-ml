@@ -27,8 +27,10 @@ The system is designed to be transparent, explainable, and extensible.
 ---
 
 ## 🏗️ Project Structure
+> **Project Status:** Evidence-Ready  
+> This repository is structured and documented to demonstrate applied machine learning, backend API design, and product-led engineering.  
+> Reviewers are not expected to run the code to assess this project.
 
-```text
 nxtabroad-visa-readiness-ml/
 │
 ├── backend/
