@@ -1,194 +1,169 @@
-# NxtAbroad AI – Visa Readiness & Eligibility Intelligence Engine
+# NxtAbroad AI – Visa Readiness & Eligibility Engine
 
-Evidence 1 – UK Global Talent Visa (Mandatory Criterion – Innovation)
+NxtAbroad AI is a rule-based and machine-learning–assisted visa readiness and eligibility assessment engine designed to support education consultants, immigration advisers, and digital education platforms.
 
-NxtAbroad AI is an intelligent rules-driven scoring engine designed to evaluate student eligibility, documentation quality, and visa readiness for international study routes including the United Kingdom, Canada, Europe, and the UAE.
+The system evaluates applicant profiles across academic history, financial capacity, documentation completeness, and risk indicators to generate an explainable readiness score and actionable recommendations.
 
-The system was fully conceived, architected, and engineered by Ibrahim Akintunde Akinyera, Founder of NxtAbroad Limited (UK–Nigeria). It is actively used as a core decision-support tool inside NxtAbroad’s education and immigration advisory operations.
+This repository contains the core scoring engine and the foundations of the API-first product architecture that powers NxtAbroad AI.
 
--------------------------------------------------------------
+---
 
-## 1. Project Overview
+## Key Features
 
-Traditional student-recruitment and visa counselling processes are highly manual, inconsistent, and difficult to scale. Advisors interpret complex immigration rules differently, documentation checks vary across offices, and students receive conflicting opinions about their chances of success.
+- Visa readiness scoring (0–100)
+- Explainable rules-based scoring engine (70+ rules)
+- Risk flag detection with severity levels
+- Document completeness and consistency checks
+- Human-readable scoring explanations
+- API-ready architecture
+- Built for compliance-driven environments
 
-NxtAbroad AI addresses this by converting visa policies, institutional admission rules, and internal risk guidelines into a transparent, repeatable scoring framework. The engine:
+---
 
-- Analyses academic history, English language proficiency, program fit, and destination preferences
-- Evaluates financial strength and proof-of-funds against country-specific rules
-- Assesses risk indicators (previous refusals, documentation gaps, complex profiles)
-- Produces a Visa Readiness Score (Low / Medium / High) with clear explanations
+## Why Rules-First (Not ML-Only)
 
-This repository captures the core scoring engine, supporting scripts, diagrams, and Tech Nation evidence documents.
+Visa and compliance systems require transparency and explainability.
 
--------------------------------------------------------------
+NxtAbroad AI prioritises:
+- Deterministic rules
+- Weighted scoring logic
+- Clear, auditable explanations
 
-## 2. Key Features
+Machine learning is used selectively for classification and anomaly detection and does not replace explainable decision logic.
 
-- Rules-Driven Visa Readiness Engine  
-  Encodes admission and visa policies into modular Python rules for different destinations and study levels.
+This approach ensures trust, auditability, and regulatory alignment.
 
-- Transparent Scoring & Explanations  
-  Outputs a readiness band plus structured reasons (e.g., “Funds below UKVI minimum”, “High academic alignment with target programme”).
+---
 
-- Multi-Country Support  
-  Designed for UK, Canada, Europe, and UAE routes with configurable rule sets.
+## Architecture Overview
 
-- Operational Focus  
-  Tested with real-world cases at NxtAbroad Limited, ensuring practical alignment with advisor workflows.
+Applicant Data and Documents  
+→ Validation and Normalisation  
+→ Rules Engine (Weighted Scoring)  
+→ Risk Flag Generation  
+→ Explainable Score Output  
+→ Report or API Response
 
-- Evidence-Ready Documentation  
-  Includes Tech Nation evidence write-up, architecture diagrams, and synthetic sample profiles.
+The engine is designed to run as a CLI tool, a backend service, or within a FastAPI microservice.
 
--------------------------------------------------------------
+---
 
-## 3. System Architecture
-
-High-level architecture of NxtAbroad AI:
-
-Sample Leads (CSV / Form / CRM)
-        |
-        v
-+-----------------------+
-|   NxtAbroad AI Core   |
-|                       |
-|  +-----------------+  |
-|  |  Rules Engine   |  |
-|  +-----------------+  |
-|  |  Lead Scorer    |  |
-|  +-----------------+  |
-+-----------------------+
-        |
-        v
-Readiness Report (Low / Medium / High)
-
-Scoring Flow (see docs/figures/scoring_flow.png):
-
-1. Load candidate profile(s)
-2. Apply academic rules
-3. Apply financial rules
-4. Apply risk rules
-5. Combine into readiness score + explanations
-
--------------------------------------------------------------
-
-## 4. Repository Structure
+## Repository Structure
 
 nxtabroad-visa-readiness-ml/
-├── data/
-│   └── raw/
-│       └── sample_profiles.csv                # Synthetic visa-style inputs
-│
-├── docs/
-│   └── figures/
-│       ├── architecture.png                   # System architecture diagram
-│       └── scoring_flow.png                   # Rule and scoring flow diagram
-│
-├── src/
-│   ├── rules_engine.py                        # Core rule logic
-│   ├── scorer.py                               # Aggregates rule outputs
-│   └── utils.py                                # Helper functions (validation, I/O)
-│
-├── models/                                     # Reserved for future ML models
-│
-├── README.md                                   # This file
-├── TECH_NATION_EVIDENCE.md                     # Tech Nation narrative document
-├── requirements.txt                            # Python dependencies
-└── LICENSE                                     # MIT License
+├── engine/               # Core scoring logic
+├── rules/                # Rule definitions and weights
+├── data/                 # Synthetic sample datasets
+├── tests/                # Unit tests
+├── api/                  # API schemas and references
+├── docs/                 # Architecture and usage docs
+├── docker/               # Docker and deployment configs
+├── README.md
+└── requirements.txt
 
--------------------------------------------------------------
+---
 
-## 5. Quickstart
+## Installation (Local)
 
-### Environment Setup
+### Prerequisites
+- Python 3.10+
+- pip
+- virtual environment recommended
 
+### Setup
+
+```bash
 git clone https://github.com/akinyeraakintunde/nxtabroad-visa-readiness-ml.git
 cd nxtabroad-visa-readiness-ml
-
-python -m venv venv
-source venv/bin/activate           # Windows: venv\Scripts\activate
-
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-### Run Sample Scoring
 
-python src/scorer.py \
-    --input data/raw/sample_profiles.csv \
-    --output data/processed/readiness_report.csv
+⸻
 
-This will:
+Running the Engine
 
-1. Load sample profiles  
-2. Apply academic, financial, and risk rules  
-3. Produce readiness bands (Low / Medium / High)  
-4. Export a CSV with scores + explanations
+python main.py
 
--------------------------------------------------------------
+or, depending on configuration:
 
-## 6. Rules & Scoring Logic
+python -m engine
 
-Academic Rules:
-- Validates degree level vs. programme
-- Checks grade band and study gap
-- Flags weak academic alignment
+The engine processes a sample applicant profile and returns:
+	•	Readiness score
+	•	Risk flags
+	•	Explanation breakdown
 
-Financial Rules:
-- Verifies funds vs. minimum thresholds
-- Validates 28/30/90-day savings windows
-- Flags marginal or unstable finances
+⸻
 
-Risk & Compliance Rules:
-- Checks previous refusals
-- Assesses sponsor legitimacy
-- Evaluates intent and career alignment
+Example Output
 
-Each rule returns a numeric score + explanations.  
-Final Visa Readiness Score = weighted aggregate of all rules.
+{
+  "score": 78,
+  "band": "GREEN",
+  "flags": [
+    {
+      "type": "FINANCIAL_BUFFER_LOW",
+      "severity": "MEDIUM",
+      "message": "Declared funds are close to minimum threshold"
+    }
+  ],
+  "explanations": [
+    "Strong academic background",
+    "Complete documentation provided",
+    "Financial capacity acceptable with minor risk"
+  ]
+}
 
--------------------------------------------------------------
 
-## 7. Example Output
+⸻
 
-Example from readiness_report.csv:
+Product Roadmap
+	•	FastAPI backend service
+	•	Applicant and application management
+	•	Secure document upload
+	•	PDF readiness report generation
+	•	Admin dashboard
+	•	Multi-country support (UK, Canada, EU)
 
-candidate_id,route,country,readiness_score,readiness_band,explanations  
-ABR001,Postgraduate,UK,0.82,High,"Strong academic fit; Funds above UKVI minimum; No previous refusals"  
-NXT014,Undergraduate,Canada,0.46,Medium,"Acceptable grades but marginal funds; Recommend improving proof-of-funds"  
-NXT021,Postgraduate,UK,0.23,Low,"Previous refusal; Insufficient savings history; High overall risk"
+⸻
 
--------------------------------------------------------------
+Data and Privacy
 
-## 8. How This Supports the UK Global Talent Visa
+All sample data in this repository is synthetic.
+No real applicant data is stored.
+Production systems implement access control, audit logging, and consent tracking.
 
-This project is submitted as Evidence 1 (Mandatory Criterion – Innovation) and demonstrates:
+⸻
 
-- Founder-led innovation  
-- Technical depth in designing a rule-based scoring engine  
-- Real operational impact inside NxtAbroad Limited  
-- Clear documentation, diagrams, and sample data  
-- Strong practical understanding of visa rules and digital transformation
+Contributing
 
-See:
+Contributions are welcome for:
+	•	Rule optimisation
+	•	Testing
+	•	Documentation
+	•	API integrations
 
-- TECH_NATION_EVIDENCE.md  
-- Evidence_1_NxtAbroad_AI_Ibrahim_Akinyera.pdf
+Please open an issue or submit a pull request.
 
--------------------------------------------------------------
+⸻
 
-## 9. Future Roadmap
+Author
 
-- Add a web dashboard for advisors  
-- Integrate ML-based risk prediction  
-- Expand to more countries and rule sets  
-- Convert into a FastAPI scoring service  
+Ibrahim Akintunde Akinyera
+AI/ML Engineer · Cybersecurity & Risk Engineering Specialist
+Founder, NxtAbroad Limited
 
--------------------------------------------------------------
+GitHub: https://github.com/akinyeraakintunde
+LinkedIn: https://www.linkedin.com/in/ibrahimakinyera
 
-## 10. License and Contact
+⸻
 
-MIT License (demonstration use only; operational versions remain proprietary to NxtAbroad Limited).
+Licence
 
-Author: Ibrahim Akintunde Akinyera  
-Company: NxtAbroad Limited (UK–Nigeria)  
-GitHub: https://github.com/akinyeraakintunde  
-Portfolio: https://akinyeraakintunde.github.io/Ibrahim-Akinyera/
+MIT License
+
+---
+
+When you’ve pasted and committed this, reply **“README done”** and we’ll move straight into **Step 1: FastAPI backend on GitHub**.
