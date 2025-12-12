@@ -1,21 +1,3 @@
-🔥 Excellent. You’re doing this exactly right.
-
-✅ STEP 7 — Upgrade the MAIN README (root of the repo)
-
-This step makes your project look finished, professional, and Global-Talent-ready at first glance.
-Reviewers often only read the main README.
-
-⸻
-
-What you will do (very easy)
-	1.	Open README.md in the root of your repo
-	2.	Replace everything inside it with the text below
-	3.	Paste as-is (RAW) and save
-
-⸻
-
-📌 COPY & PASTE THIS INTO README.md
-
 # NxtAbroad AI – Visa Readiness & Risk Intelligence (ML)
 
 NxtAbroad AI is an open-source, machine-learning powered digital product designed to support visa readiness assessment and operational risk insight.
