@@ -30,3 +30,11 @@ def assess(payload: AssessRequest):
         english_test_done=payload.english_test_done
     )
     return assess_readiness(profile)
+    
+    @app.get("/")
+def root():
+    return {
+        "name": "NxtAbroad AI – Visa Readiness Agent (Demo)",
+        "docs": "/docs",
+        "health": "/health"
+    }
