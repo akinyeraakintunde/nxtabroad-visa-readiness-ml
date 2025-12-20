@@ -75,6 +75,10 @@ The ML workflow focuses on:
 	•	Extensible scoring architecture
 
 This repository is structured to support further experimentation and production deployment.
+
+## 🧠 AI Agent Architecture
+See the 1-page diagram: **docs/agent-architecture.md**
+
 [![LIVE DEMO](https://img.shields.io/badge/LIVE-DEMO-brightgreen)](https://nxtabroad-ai-demo.onrender.com/docs)
 
 [![LIVE DEMO](https://img.shields.io/badge/LIVE-DEMO-brightgreen)](https://nxtabroad-ai-demo.onrender.com/docs)
