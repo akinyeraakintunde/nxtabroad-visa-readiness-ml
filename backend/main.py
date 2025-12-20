@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
 from backend.decision_engine import ApplicantProfile, assess_readiness
-
+from backend.demo_page import router as demo_router
 app = FastAPI(
     title="NxtAbroad AI – Visa Readiness Agent (Demo)",
     version="1.0.0",
