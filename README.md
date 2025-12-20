@@ -75,7 +75,7 @@ The ML workflow focuses on:
 	•	Extensible scoring architecture
 
 This repository is structured to support further experimentation and production deployment.
-
+[![LIVE DEMO](https://img.shields.io/badge/LIVE-DEMO-brightgreen)](https://nxtabroad-ai-demo.onrender.com/docs)
 ⸻
 
 👤 Author
