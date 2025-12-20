@@ -82,20 +82,9 @@ This demo is built for:
 
 It is not a production immigration advisory system.
 
-Author
+## Author
 
 Ibrahim Akintunde Akinyera
 AI / ML Engineer · Agent Engineer · Cybersecurity & Risk Engineering
 GitHub: https://github.com/akinyeraakintunde
 
----
-
-### ✅ After this
-Once you paste and commit this file, reply **DONE**.
-
-Next we will:
-➡️ **Deploy it live (Step 7)**  
-➡️ Get you a **real URL recruiters can click**  
-➡️ Add a **“Live Demo” badge to your GitHub**
-
-You’re doing very well — this is now a **real agent**, not theory.
