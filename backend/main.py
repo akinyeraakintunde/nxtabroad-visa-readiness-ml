@@ -19,7 +19,40 @@ class AssessRequest(BaseModel):
 @app.get("/health")
 def health():
     return {"status": "ok"}
-
+@app.get("/demo")
+def demo():
+    """
+    Non-technical, pretty JSON summary endpoint.
+    Returns a friendly overview + sample input + what the system outputs.
+    """
+    return {
+        "product": "NxtAbroad AI – Visa Readiness Agent (Demo)",
+        "type": "Rules-first, explainable scoring agent",
+        "what_it_does": [
+            "Checks basic visa readiness factors",
+            "Returns clear reasons (not black-box)",
+            "Gives actionable recommendations"
+        ],
+        "how_to_use": {
+            "open_docs": "https://nxtabroad-ai-demo.onrender.com/docs",
+            "try_health": "/health",
+            "try_demo": "/demo",
+            "try_assess": "POST /assess (use the request body below)"
+        },
+        "sample_request_body": {
+            "highest_qualification": "MSc",
+            "destination_country": "UK",
+            "available_funds_gbp": 12000,
+            "work_experience_years": 4,
+            "english_test_done": False
+        },
+        "expected_output_fields": [
+            "signals",
+            "recommendations",
+            "inputs_used"
+        ],
+        "note": "This is a demo agent built for explainability and compliance-style outputs."
+    }
 @app.post("/assess")
 def assess(payload: AssessRequest):
     profile = ApplicantProfile(
