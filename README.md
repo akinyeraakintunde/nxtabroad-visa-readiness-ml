@@ -1,5 +1,6 @@
 # NxtAbroad AI – Visa Readiness & Risk Intelligence (ML)
-
+[![LIVE DEMO](https://img.shields.io/badge/LIVE%20DEMO-Open-green?style=for-the-badge)](https://nxtabroad-ai-demo.onrender.com/docs)
+[![API DOCS](https://img.shields.io/badge/API%20Docs-Swagger-blue?style=for-the-badge)](https://nxtabroad-ai-demo.onrender.com/docs)
 NxtAbroad AI is an open-source, machine-learning powered digital product designed to support visa readiness assessment and operational risk insight.
 
 This project demonstrates applied artificial intelligence, product-led engineering, and backend API development for real-world decision support systems.
