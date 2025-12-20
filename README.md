@@ -76,9 +76,12 @@ The ML workflow focuses on:
 
 This repository is structured to support further experimentation and production deployment.
 [![LIVE DEMO](https://img.shields.io/badge/LIVE-DEMO-brightgreen)](https://nxtabroad-ai-demo.onrender.com/docs)
-⸻
 
-👤 Author
+[![LIVE DEMO](https://img.shields.io/badge/LIVE-DEMO-brightgreen)](https://nxtabroad-ai-demo.onrender.com/docs)
+[![HEALTH](https://img.shields.io/badge/HEALTH-OK-blue)](https://nxtabroad-ai-demo.onrender.com/health)
+
+
+## 👤 Author
 
 Ibrahim Akintunde Akinyera
 Founder | ML Engineer | Digital Product Builder
