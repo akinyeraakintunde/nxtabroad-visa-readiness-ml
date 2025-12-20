@@ -8,7 +8,7 @@ app = FastAPI(
     version="1.0.0",
     description="Rules-first, explainable visa readiness scoring agent."
 )
-
+app.include_router(demo_router)
 class AssessRequest(BaseModel):
     highest_qualification: str = Field(..., example="MSc")
     destination_country: str = Field(..., example="UK")
